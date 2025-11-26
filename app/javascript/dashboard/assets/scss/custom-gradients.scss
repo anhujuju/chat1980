@@ -1,0 +1,121 @@
+// 1980 TIC Custom Gradients and Styles
+// Morado: #56267e - Celeste: #37e8f3
+
+// Main gradient: 50deg, 80% Morado → 20% Celeste
+.gradient-1980 {
+  background: linear-gradient(50deg, #56267e 80%, #37e8f3 20%) !important;
+}
+
+// Primary buttons with gradient
+.button--primary,
+.btn-primary,
+[class*="bg-n-blue-9"],
+[class*="bg-woot-500"] {
+  background: linear-gradient(50deg, #56267e 80%, #37e8f3 20%) !important;
+  border-color: #56267e !important;
+  
+  &:hover {
+    background: linear-gradient(50deg, #6b3098 80%, #4ff4ff 20%) !important;
+    box-shadow: 0 4px 12px rgba(86, 38, 126, 0.3);
+  }
+  
+  &:active {
+    background: linear-gradient(50deg, #4a1f65 80%, #2ed4df 20%) !important;
+  }
+}
+
+// Header/Navigation gradient
+.app-header,
+.conversation-header,
+.sidebar-header {
+  background: linear-gradient(50deg, #56267e 80%, #37e8f3 20%) !important;
+}
+
+// Accent elements with celeste
+.badge--primary,
+.label--primary {
+  background: #37e8f3 !important;
+  color: #1a1a1a !important;
+}
+
+// Links and interactive elements
+a.text-n-blue-11,
+[class*="text-n-blue"] {
+  color: #56267e !important;
+  
+  &:hover {
+    color: #6b3098 !important;
+  }
+}
+
+// Focus states with gradient border
+.focus\:ring-n-blue-9:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #56267e !important;
+  box-shadow: 0 0 0 3px rgba(86, 38, 126, 0.1) !important;
+}
+
+// Loading and progress bars
+.progress-bar,
+.loading-indicator {
+  background: linear-gradient(90deg, #56267e 0%, #37e8f3 100%);
+}
+
+// Active/Selected states
+.active,
+.selected,
+[aria-selected="true"] {
+  background: linear-gradient(50deg, rgba(86, 38, 126, 0.1) 80%, rgba(55, 232, 243, 0.1) 20%) !important;
+  border-left: 3px solid #56267e !important;
+}
+
+// Sidebar active items
+.sidebar-item--active,
+.conversation--active {
+  background: linear-gradient(50deg, rgba(86, 38, 126, 0.15) 80%, rgba(55, 232, 243, 0.05) 20%) !important;
+  border-left-color: #56267e !important;
+}
+
+// Widget bubble (chat widget)
+.chat-bubble,
+.widget-bubble {
+  background: linear-gradient(50deg, #56267e 80%, #37e8f3 20%) !important;
+}
+
+// Notifications and badges
+.notification-badge,
+.unread-badge {
+  background: #37e8f3 !important;
+  color: #1a1a1a !important;
+}
+
+// Hover effects for cards
+.card:hover,
+.hover-card:hover {
+  border-color: #56267e !important;
+  box-shadow: 0 4px 12px rgba(86, 38, 126, 0.15);
+}
+
+// Status indicators
+.status--online {
+  background: #37e8f3 !important;
+}
+
+// Dark mode adjustments
+.dark {
+  .button--primary,
+  .btn-primary {
+    background: linear-gradient(50deg, #6b3098 80%, #37e8f3 20%) !important;
+    
+    &:hover {
+      background: linear-gradient(50deg, #7f3ab3 80%, #4ff4ff 20%) !important;
+    }
+  }
+  
+  .app-header,
+  .conversation-header {
+    background: linear-gradient(50deg, #4a1f65 80%, #2ebfc9 20%) !important;
+  }
+}
