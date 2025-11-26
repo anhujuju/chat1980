@@ -13,15 +13,21 @@
 [class*="bg-woot-500"] {
   background: linear-gradient(50deg, #56267e 80%, #37e8f3 20%) !important;
   border-color: #56267e !important;
-  
-  &:hover {
-    background: linear-gradient(50deg, #6b3098 80%, #4ff4ff 20%) !important;
-    box-shadow: 0 4px 12px rgba(86, 38, 126, 0.3);
-  }
-  
-  &:active {
-    background: linear-gradient(50deg, #4a1f65 80%, #2ed4df 20%) !important;
-  }
+}
+
+.button--primary:hover,
+.btn-primary:hover,
+[class*="bg-n-blue-9"]:hover,
+[class*="bg-woot-500"]:hover {
+  background: linear-gradient(50deg, #6b3098 80%, #4ff4ff 20%) !important;
+  box-shadow: 0 4px 12px rgba(86, 38, 126, 0.3);
+}
+
+.button--primary:active,
+.btn-primary:active,
+[class*="bg-n-blue-9"]:active,
+[class*="bg-woot-500"]:active {
+  background: linear-gradient(50deg, #4a1f65 80%, #2ed4df 20%) !important;
 }
 
 // Header/Navigation gradient
@@ -42,13 +48,14 @@
 a.text-n-blue-11,
 [class*="text-n-blue"] {
   color: #56267e !important;
-  
-  &:hover {
-    color: #6b3098 !important;
-  }
 }
 
-// Focus states with gradient border
+a.text-n-blue-11:hover,
+[class*="text-n-blue"]:hover {
+  color: #6b3098 !important;
+}
+
+// Focus states
 .focus\:ring-n-blue-9:focus,
 input:focus,
 textarea:focus,
@@ -104,18 +111,17 @@ select:focus {
 }
 
 // Dark mode adjustments
-.dark {
-  .button--primary,
-  .btn-primary {
-    background: linear-gradient(50deg, #6b3098 80%, #37e8f3 20%) !important;
-    
-    &:hover {
-      background: linear-gradient(50deg, #7f3ab3 80%, #4ff4ff 20%) !important;
-    }
-  }
-  
-  .app-header,
-  .conversation-header {
-    background: linear-gradient(50deg, #4a1f65 80%, #2ebfc9 20%) !important;
-  }
+.dark .button--primary,
+.dark .btn-primary {
+  background: linear-gradient(50deg, #6b3098 80%, #37e8f3 20%) !important;
+}
+
+.dark .button--primary:hover,
+.dark .btn-primary:hover {
+  background: linear-gradient(50deg, #7f3ab3 80%, #4ff4ff 20%) !important;
+}
+
+.dark .app-header,
+.dark .conversation-header {
+  background: linear-gradient(50deg, #4a1f65 80%, #2ebfc9 20%) !important;
 }
