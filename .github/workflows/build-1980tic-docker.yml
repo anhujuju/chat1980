@@ -23,10 +23,24 @@ jobs:
         with:
           context: .
           file: docker/Dockerfile
-          push: false  # NO subir a Docker Hub
+          push: false
+          load: true  # ⭐ IMPORTANTE: Cargar imagen en Docker local
           tags: 1980tic-chatwoot:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
       
+      - name: Export Docker image
+        run: |
+          docker save 1980tic-chatwoot:latest | gzip > 1980tic-chatwoot.tar.gz
+          ls -lh 1980tic-chatwoot.tar.gz
+      
+      - name: Upload Docker image as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: 1980tic-chatwoot-image
+          path: 1980tic-chatwoot.tar.gz
+          retention-days: 7
+      
       - name: Build completed
-        run: echo "✅ Docker image built successfully!"
+        run: echo "✅ Docker image built and saved successfully!"
+
