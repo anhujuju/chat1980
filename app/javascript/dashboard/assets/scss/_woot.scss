@@ -1,5 +1,20 @@
-// 1980 TIC Custom Gradients
-@import 'custom-gradients';
+// scss-lint:disable SpaceAfterPropertyColon
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import 'shared/assets/fonts/InterDisplay/inter-display';
+@import 'shared/assets/fonts/inter';
+
+// Next Colors
+@import 'next-colors';
+
+// Base styles for elements
+@import 'base';
+
+// Plugins
+@import 'plugins/multiselect';
+@import 'plugins/date-picker';
 
 html,
 body {
